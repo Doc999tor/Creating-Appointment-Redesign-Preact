@@ -9,12 +9,12 @@ document.body.onload = function () {
     <BrowserRouter>
       <header className="App-header">
         <nav>
-          <ul>
-            <li><Link to="/counter">COUNTER</Link></li>
+           <ul>
+             <li><Link to="/counter">COUNTER</Link></li>
             <li><Link to="/store">STORE</Link></li>
-          </ul>
-        </nav>
-      </header>
+           </ul>
+         </nav>
+       </header>
       <App />
     </BrowserRouter>,
     document.getElementById('root'))

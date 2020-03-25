@@ -36,7 +36,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+              reloadAll: true
+            }
+          },
+          'css-loader'
+        ]
       },
       {
         test: /\.styl$/,
@@ -44,7 +53,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: isProd === 'development',
+              hmr: process.env.NODE_ENV === 'development',
               reloadAll: true
             }
           },

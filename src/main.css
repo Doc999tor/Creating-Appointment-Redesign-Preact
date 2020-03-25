@@ -1,2 +1,18 @@
 @import "~normalize.css";
 @import "variables.css";
+#root {
+  overflow-x: hidden;
+}
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.page {
+  animation: 0.5s test ease-in-out;
+}
+@keyframes test {
+  0% {
+    transform: translateX(100%);
+  }
+}

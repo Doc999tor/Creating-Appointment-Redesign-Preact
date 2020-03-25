@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import Counter from './Counter'
 import Date from './Date'
-import mainStore from '../store/mainStore'
-
+@withRouter
 class App extends Component {
   render () {
+    const { location } = this.props
     return (
-      <Switch>
+      <Switch location={location}>
         <Route path='/counter' exact component={Counter} />
         <Route path='/store' exact component={Date} />
-        <Redirect from='/' to='/counter' />
+        <Redirect from='/' exact to='/counter' />
       </Switch>
     )
   }
 }
-export default observer(App)
+export default App

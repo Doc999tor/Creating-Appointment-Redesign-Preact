@@ -1,28 +1,33 @@
-import {decorate, observable, computed, action} from 'mobx'
+import { decorate, observable, action } from 'mobx';
+
 class Store {
   count = 0
 
   setCount(payload) {
-    this.count = payload
+    this.count = payload;
   }
+
   increment() {
-    let count = this.count
-    count++
-    this.setCount(count)
+    let count = this.count;
+    count++;
+    this.setCount(count);
   }
+
   decrement() {
-    let count = this.count
+    let count = this.count;
     count--
-    this.setCount(count)
+    this.setCount(count);
   }
+
   clear() {
-    this.setCount(0)
+    this.setCount(0);
   }
 }
-Store = decorate(Store, {
+
+decorate(Store, {
   count: observable,
   increment: action,
   decrement: action,
-  clear: action
-})
+  clear: action,
+});
 export default new Store();

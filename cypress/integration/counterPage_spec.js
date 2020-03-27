@@ -1,0 +1,16 @@
+describe('Counter page', function () {
+  it('checking  actions  buttons for counter', function() {
+    cy.visit('/counter')
+    cy.get('h1').should('contain', '0')
+    cy.get('.increment').click().click()
+    cy.get('h1').should('contain', '2')
+    cy.get('.decrement').click().click().click()
+    cy.get('h1').should('contain', '-1')
+    cy.get('.store').click()
+    cy.get('p').should('contain', '-1')
+    cy.get('button').click()
+    cy.get('p').should('contain', '0')
+    cy.get('.counter').click()
+    cy.get('.increment').click()
+  })
+})

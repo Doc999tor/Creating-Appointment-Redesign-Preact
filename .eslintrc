@@ -1,17 +1,20 @@
 {
   "env": {
+    "cypress/globals": true,
+    "jest/globals": true,
     "browser": true,
     "es6": true
   },
-  "extends": ["airbnb", "airbnb/hooks"],
+  "extends": ["airbnb", "airbnb/hooks", "plugin:jest/recommended"],
   "globals": {
     "config": false
   },
   "parser": "babel-eslint",
   "rules": {
-    "prefer-destructuring": "off",
     "react/jsx-one-expression-per-line": "off",
     "jsx-quotes": ["error", "prefer-single"],
-    "quotes": ["error", "single"]
+    "prefer-arrow-callback": "off",
+    "quotes": ["error", "single"],
+    "prefer-destructuring": "off"
   }
 }

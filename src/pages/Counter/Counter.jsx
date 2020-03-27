@@ -7,8 +7,8 @@ import './Counter.css';
 const Counter = observer(() => (
   <div className='page'>
     <Title value={mainStore.count} />
-    <button type='button' onClick={() => mainStore.increment()}>+</button>
-    <button type='button' onClick={() => mainStore.decrement()}>-</button>
+    <button type='button' className='increment' onClick={() => mainStore.increment()}>+</button>
+    <button type='button' className='decrement' onClick={() => mainStore.decrement()}>-</button>
   </div>
 ));
 

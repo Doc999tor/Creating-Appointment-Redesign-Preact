@@ -10,8 +10,8 @@ document.body.onload = function () {
       <header className="App-header">
         <nav>
            <ul>
-             <li><Link to="/counter">COUNTER</Link></li>
-            <li><Link to="/store">STORE</Link></li>
+            <li className='counter'><Link to="/counter">COUNTER</Link></li>
+            <li className='store'><Link to="/store">STORE</Link></li>
            </ul>
          </nav>
        </header>

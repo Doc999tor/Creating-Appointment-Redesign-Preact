@@ -71,9 +71,6 @@
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2"
   },
-  "release": {
-    "analyzeCommits": "simple-commit-message"
-  },
   "config": {
     "pre-git": {
       "commit-msg": "simple",
